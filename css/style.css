@@ -1,14 +1,58 @@
-h1 {
-	font-size: 100px;
-	text-align: center;
-	margin-top: 100px;
+body {
+	background-color: orange;
+	font-size: 12px;
 }
 
-#steve a {
-	color: orange;
+.hero {
+	background-color: red;
+	padding: 3em 0;
+	width: 100%;
+	float: left;
 }
 
-.professor a {
-	text-transform: uppercase;
-	color: green;
+.container {
+	margin: 0 auto;
+	width: 85%;
+}
+
+.third {
+	float: left;
+	width: 100%;
+}
+
+h2 {
+	font-size: 5em;
+}
+
+.third p {
+	font-size: 2em;
+	color: white;
+}
+
+@media (min-width: 768px) {
+	.third {
+		float: left;
+		width: 31%;
+		margin-right: 2%;
+	}
+
+	body {
+		background-color: blue;
+		font-size: 16px;
+	}
+
+}
+
+@media (min-width: 1180px) {
+	.third {
+		float: left;
+		width: 31%;
+		margin-right: 2%;
+	}
+
+	body {
+		background-color: green;
+		font-size: 20px;
+	}
+
 }
