@@ -1,0 +1,14 @@
+h1 {
+	font-size: 100px;
+	text-align: center;
+	margin-top: 100px;
+}
+
+#steve a {
+	color: orange;
+}
+
+.professor a {
+	text-transform: uppercase;
+	color: green;
+}
