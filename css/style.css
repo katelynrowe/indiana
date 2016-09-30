@@ -29,6 +29,10 @@ h2 {
 	color: white;
 }
 
+.fa-twitter-square {
+	color: yellow;
+}
+
 @media (min-width: 768px) {
 	.third {
 		float: left;
