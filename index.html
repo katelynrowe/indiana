@@ -12,17 +12,12 @@
 
 <body id="top" class="air">
 
+<div class="container">
+<div class="belt">
+	<canvas id="myChart" width="400" height="400"></canvas>
+</div>
+</div>
 
-	<img src="http://www.placekitten.com/600/800">
-
-<!--		<h1 class"">0</h1>
-		<h2>Awesomeness</h2>
--->
-
-	<div class="button">
-		<button id="decrease"> - </button>
-		<button id="increase"> + </button>
-	</div>
 
 
 <script src="https://use.fontawesome.com/510c69f39f.js"></script>
@@ -34,53 +29,47 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 
-<script src"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
 
-<script type="text/javascript">
+ <script type="text/javascript">
 
+ var ctx = $("#myChart");
+ var myDoughnutChart = new Chart(ctx, {
+     type: 'doughnut',
+     data: {
+     labels: [
+         "Red", "Blue", "Yellow"
+     ],
+     datasets: [
+         {
+             data: [300, 50, 100],
+             backgroundColor: [
+                 "#FF6384",
+                 "#36A2EB",
+                 "#FFCE56"
+             ],
+             hoverBackgroundColor: [
+                 "#FF6384",
+                 "#36A2EB",
+                 "#FFCE56"
+             ]
+         }]
+     },
+     options: {
+       legend: {
+           display: true,
+           labels: {
+               fontColor: 'rgb(255, 99, 132)'
+           }
+       },
+       responsive: true
+     }
 
+ });
 
-
-	var oldSrc= "http://www.placekitten.com/600/800";
-
-	var murrayIndex=800;
-
-
-	$('button').click(function(){
-
-//		var oldSrc = "http://www.placekitten.com/600/800"
-
-
-
-		if($(this).attr('id') === "increase"){
-			murrayIndex = murrayIndex + 1;
-		} else {
-			murrayIndex = murrayIndex - 1;
-		}
-
-		
-		var newSrc = "http://www.placekitten.com/600/" + murrayIndex;
-	
-
-		$('img').attr('src', newSrc);	
-	});
-
-
-
-
-	var awesomeness = 0;
-
-	$('button').click(function(){
-
-		if($(this).attr('id') === "increase"){
-			awesomeness = awesomeness + 1;
-		} else {
-			awesomeness = awesomeness - 1;
-		}
-		$('h1').text(awesomeness);
-	});
 
 
 </script>
