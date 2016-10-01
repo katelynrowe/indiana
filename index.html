@@ -9,35 +9,81 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 
-	<script src="https://use.fontawesome.com/510c69f39f.js"></script>
-	<script type="text/javascript"></script>
 
 
 </head>
 <body id="top" class="air">
 
-	<section class="hero">
-		<div class="container">
-			<h2 class="animated infinite headShake">Bacon of the world</h2>
-			<div class="third" id="map1">
-				<i class="fa fa-twitter-square fa-5x"></i>
-				<p>Bacon ipsum dolor amet flank pork loin ham hock hamburger tenderloin andouille. Andouille tenderloin porchetta capicola bresaola pork belly pork chop pastrami tri-tip tail doner kielbasa shoulder sausage bacon. Chicken cow prosciutto ball tip frankfurter alcatra turducken meatloaf shankle pork loin rump fatback. Shank bacon pork belly filet mignon, tongue chuck ball tip swine shoulder fatback t-bone short ribs. Bacon shank ribeye boudin tri-tip, pork flank swine. Fatback flank landjaeger strip steak.</p>
-			</div>
-			<div class="third" id="map2">
-				<p>Bacon ipsum dolor amet flank pork loin ham hock hamburger tenderloin andouille. Andouille tenderloin porchetta capicola bresaola pork belly pork chop pastrami tri-tip tail doner kielbasa shoulder sausage bacon. Chicken cow prosciutto ball tip frankfurter alcatra turducken meatloaf shankle pork loin rump fatback. Shank bacon pork belly filet mignon, tongue chuck ball tip swine shoulder fatback t-bone short ribs. Bacon shank ribeye boudin tri-tip, pork flank swine. Fatback flank landjaeger strip steak.</p>
-			</div>
-		
-			<div class="third" id="map3">
-				<p>Bacon ipsum dolor amet flank pork loin ham hock hamburger tenderloin andouille. Andouille tenderloin porchetta capicola bresaola pork belly pork chop pastrami tri-tip tail doner kielbasa shoulder sausage bacon. Chicken cow prosciutto ball tip frankfurter alcatra turducken meatloaf shankle pork loin rump fatback. Shank bacon pork belly filet mignon, tongue chuck ball tip swine shoulder fatback t-bone short ribs. Bacon shank ribeye boudin tri-tip, pork flank swine. Fatback flank landjaeger strip steak.</p>
-			</div>
-		</div>
-	</section>
 
-	<div class="">
-		<h1 class="professor" id="steve"><a href="http://mediaschool.indiana.edu/profile/?p=stlayton">Steve Layton</a></h1>
+	<img src="http://www.placekitten.com/600/800">
 
-		<h1 class="professor"><a href="http://mediaschool.indiana.edu/profile/?p=stlayton">Bonnie Layton</a></h1>
+<!--		<h1 class"">0</h1>
+		<h2>Awesomeness</h2>
+-->
+
+	<div class="button">
+		<button id="decrease"> - </button>
+		<button id="increase"> + </button>
 	</div>
+
+
+<script src="https://use.fontawesome.com/510c69f39f.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script src=https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+	var oldSrc= "http://www.placekitten.com/600/800";
+
+	var murrayIndex=800;
+
+
+	$('button').click(function(){
+
+//		var oldSrc = "http://www.placekitten.com/600/800"
+
+
+
+		if($(this).attr('id') === "increase"){
+			murrayIndex = murrayIndex + 1;
+		} else {
+			murrayIndex = murrayIndex - 1;
+		}
+
+		
+		var newSrc = "http://www.placekitten.com/600/" + murrayIndex;
+	
+
+		$('img').attr('src', newSrc);	
+	});
+
+
+
+
+	var awesomeness = 0;
+
+	$('button').click(function(){
+
+		if($(this).attr('id') === "increase"){
+			awesomeness = awesomeness + 1;
+		} else {
+			awesomeness = awesomeness - 1;
+		}
+		$('h1').text(awesomeness);
+	});
+
+
+</script>
+
+
 
 </body>
 </html>

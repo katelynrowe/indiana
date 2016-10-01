@@ -1,6 +1,17 @@
 body {
 	background-color: orange;
-	font-size: 12px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.button {
+	margin-top: 5em;
+}
+
+
+button {
+	font-size: 1em;
+	padding: 2em;
 }
 
 .hero {
@@ -20,7 +31,12 @@ body {
 	width: 100%;
 }
 
+h1 {
+	color: white;
+}
+
 h2 {
+	color: white;
 	font-size: 5em;
 }
 
@@ -30,7 +46,7 @@ h2 {
 }
 
 .fa-twitter-square {
-	color: yellow;
+	color: white;
 }
 
 @media (min-width: 768px) {
