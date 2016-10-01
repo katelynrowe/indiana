@@ -4,6 +4,13 @@ body {
 	text-align: center;
 }
 
+.bar {
+	display: inline block;
+	width: 20px;
+	margin-right: 2px;
+	fill: yellow;
+}
+
 .container {
 	width: 1180px;
 }
