@@ -8,6 +8,10 @@ body {
 	margin-top: 5em;
 }
 
+img {
+	width: 100%
+}
+
 
 button {
 	font-size: 1em;
@@ -61,6 +65,10 @@ h2 {
 		font-size: 16px;
 	}
 
+	img {
+		width: 25%;
+	}
+
 }
 
 @media (min-width: 1180px) {
@@ -75,4 +83,7 @@ h2 {
 		font-size: 20px;
 	}
 
+	img {
+		width: 25%
+	}
 }
