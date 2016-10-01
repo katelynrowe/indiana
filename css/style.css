@@ -8,7 +8,10 @@ body {
 	display: inline block;
 	width: 20px;
 	margin-right: 2px;
-	fill: yellow;
+}
+
+svg {
+	background-color: #dadada;
 }
 
 .container {
