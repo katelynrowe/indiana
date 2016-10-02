@@ -10,12 +10,19 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 </head>
 
-<body class="">
+<body id="top" class="air">
 
-	<div id="chartArea">
+
+	<img src="http://www.placekitten.com/600/800">
+
+<!--		<h1 class"">0</h1>
+		<h2>Awesomeness</h2>
+-->
+
+	<div class="button">
+		<button id="decrease"> - </button>
+		<button id="increase"> + </button>
 	</div>
-
-
 
 
 <script src="https://use.fontawesome.com/510c69f39f.js"></script>
@@ -27,59 +34,53 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<script src"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
 
 
 
 <script type="text/javascript">
 
-	var dataset = _.map(_.range(15), function(i){
-		return Math.random() * 50;
+
+
+
+	var oldSrc= "http://www.placekitten.com/600/800";
+
+	var murrayIndex=800;
+
+
+	$('button').click(function(){
+
+//		var oldSrc = "http://www.placekitten.com/600/800"
+
+
+
+		if($(this).attr('id') === "increase"){
+			murrayIndex = murrayIndex + 1;
+		} else {
+			murrayIndex = murrayIndex - 1;
+		}
+
+		
+		var newSrc = "http://www.placekitten.com/600/" + murrayIndex;
+	
+
+		$('img').attr('src', newSrc);	
 	});
-	var w= 600, h= 500;
 
 
-	var svg = d3.select('#chartArea').append('svg')
-		.attr('width', w)
-		.attr('height', h);
 
 
-	var yScale= d3.scale.linear()
-		.domain([0, d3.max(dataset) * 1.1])
-		.range([0, h])
+	var awesomeness = 0;
 
-	var xScale= d3.scale.ordinal()
-		.domain(dataset)
-		.rangeBands([0, w], 0.5, 0.3);
+	$('button').click(function(){
 
-	var colorScale= d3.scale.linear()
-		.domain([0, dataset.length])
-		.range(['orange', 'red']);
-
-	var multiplier = 8;
-
-	svg.selectAll('rect')
-		.data(dataset)
-		.enter()
-		.append('rect')
-		.attr('class', 'bar')
-		.attr('x', function(d, i){
-			return xScale(d);	
-		})
-		.attr('y', function(d){
-			return h - yScale(d);
-		})
-		.attr('width', xScale.rangeBands)
-		.style('height', function(d) {
-			return yScale(d);
-		})
-
-		.attr('fill', function(d,i) {
-			return colorScale(i);
-		});
+		if($(this).attr('id') === "increase"){
+			awesomeness = awesomeness + 1;
+		} else {
+			awesomeness = awesomeness - 1;
+		}
+		$('h1').text(awesomeness);
+	});
 
 
 </script>
